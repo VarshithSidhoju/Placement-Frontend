@@ -105,6 +105,28 @@ const Dashboard = () => {
           </div>
         </div>
 
+        {/* Off-Campus quick link */}
+        <div className="bg-white rounded-lg shadow-md p-6 mb-8 border border-gray-200 flex items-center justify-between">
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900">Companies applied off the campus</h3>
+            <p className="text-gray-600">Track where you applied and through which platform.</p>
+          </div>
+          <div className="flex items-center space-x-3">
+            <Link
+              to="/offcampus"
+              className="bg-gray-100 text-gray-900 px-4 py-2 rounded-lg hover:bg-gray-200"
+            >
+              View List
+            </Link>
+            <Link
+              to="/add-offcampus"
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+            >
+              Add Company
+            </Link>
+          </div>
+        </div>
+
         {/* Filters and Search */}
         <div className="bg-white rounded-lg shadow-md p-6 mb-8 border border-gray-200">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between space-y-4 md:space-y-0 md:space-x-4">

@@ -57,4 +57,10 @@ export const experienceAPI = {
   delete: (id) => api.delete(`/experiences/${id}`)
 };
 
+export const offCampusAPI = {
+  getAll: () => api.get('/offcampus'),
+  create: (data) => api.post('/offcampus', data),
+  delete: (id) => api.delete(`/offcampus/${id}`)
+};
+
 export default api;

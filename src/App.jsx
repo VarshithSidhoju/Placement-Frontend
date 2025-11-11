@@ -9,6 +9,8 @@ import Dashboard from './pages/Dashboard';
 import AddExperience from './pages/AddExperience';
 import ExperienceDetails from './pages/ExperienceDetails';
 import EditExperience from './pages/EditExperience';
+import OffCampus from './pages/OffCampus';
+import AddOffCampus from './pages/AddOffCampus';
 
 const AppContent = () => {
   const { isAuthenticated } = useAuth();
@@ -58,8 +60,24 @@ const AppContent = () => {
           } 
         />
         <Route 
+          path="/offcampus" 
+          element={
+            <ProtectedRoute>
+              <OffCampus />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/add-offcampus" 
+          element={
+            <ProtectedRoute>
+              <AddOffCampus />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
           path="/" 
-          element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} replace />} 
+          element={<Navigate to="/login" replace />} 
         />
       </Routes>
     </div>
