@@ -1,10 +1,14 @@
 import axios from 'axios';
 
+// Use environment variable or default to your deployed backend
+const baseURL = import.meta.env.VITE_API_BASE || 'https://placement-backend-chi.vercel.app/api';
+
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL,
   headers: {
     'Content-Type': 'application/json'
-  }
+  },
+  timeout: 10000 // Add timeout
 });
 
 api.interceptors.request.use(config => {
